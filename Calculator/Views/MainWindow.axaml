@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Calculator.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Calculator.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Calculator.Views.MainWindow"
+        Icon="/Assets/calc.ico"
+        Title="Calculator"
+		Height="400"
+		Width="230"
+		MinHeight="400"
+		MinWidth="230"
+		MaxHeight="400"
+		MaxWidth="230">
+        <views:MainView />
+</Window>

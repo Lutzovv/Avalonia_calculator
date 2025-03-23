@@ -1,0 +1,65 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Calculator.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Calculator.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+	<UserControl.Styles>
+		
+		
+		
+	</UserControl.Styles>
+	
+
+	<StackPanel>
+
+		<Border Width="220">
+			<TextBlock Text="" x:Name="output" Margin="10 10"
+					   HorizontalAlignment="Right"
+					   FontSize="44"
+					   ></TextBlock>
+		</Border>
+		
+		<Grid Margin="5" 
+			  ColumnDefinitions="55, 55, 55, 55"
+			  RowDefinitions="55, 55, 55, 55, 55, 55">
+			<Button Grid.Row="0" Grid.Column="0">%</Button>
+			<Button Grid.Row="0" Grid.Column="1">CE</Button>
+			<Button Grid.Row="0" Grid.Column="2" Click="clear">C</Button>
+			<Button Grid.Row="0" Grid.Column="3">[</Button>
+
+			<Button Grid.Row="1" Grid.Column="0">1/x</Button>
+			<Button Grid.Row="1" Grid.Column="1">x2</Button>
+			<Button Grid.Row="1" Grid.Column="2">√</Button>
+			<Button Grid.Row="1" Grid.Column="3">/</Button>
+
+			<Button Grid.Row="2" Grid.Column="0" Click="seven">7</Button>
+			<Button Grid.Row="2" Grid.Column="1" Click="eight">8</Button>
+			<Button Grid.Row="2" Grid.Column="2" Click="nine">9</Button>
+			<Button Grid.Row="2" Grid.Column="3">*</Button>
+
+			<Button Grid.Row="3" Grid.Column="0" Click="four">4</Button>
+			<Button Grid.Row="3" Grid.Column="1" Click="five">5</Button>
+			<Button Grid.Row="3" Grid.Column="2" Click="six">6</Button>
+			<Button Grid.Row="3" Grid.Column="3">-</Button>
+
+			<Button Grid.Row="4" Grid.Column="0" Click="one">1</Button>
+			<Button Grid.Row="4" Grid.Column="1" Click="two">2</Button>
+			<Button Grid.Row="4" Grid.Column="2" Click="three">3</Button>
+			<Button Grid.Row="4" Grid.Column="3">+</Button>
+
+			<Button Grid.Row="5" Grid.Column="0">+/-</Button>
+			<Button Grid.Row="5" Grid.Column="1" Click="zero">0</Button>
+			<Button Grid.Row="5" Grid.Column="2">,</Button>
+			<Button Grid.Row="5" Grid.Column="3">=</Button>
+		</Grid>
+		
+	</StackPanel>
+</UserControl>
